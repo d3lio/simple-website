@@ -14,7 +14,6 @@ impl IdPool {
     }
 
     pub fn next(&self) -> Id {
-        self.id.fetch_add(1, Ordering::SeqCst);
-        self.id.load(Ordering::SeqCst)
+        self.id.fetch_add(1, Ordering::SeqCst)
     }
 }
